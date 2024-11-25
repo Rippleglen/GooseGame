@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.goose-sign {
+    width: 13%;
+    height: auto;
+    object-fit: contain;
+    max-width: 90vw;
+    padding: .5rem;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: -2;
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none; 
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 5rem;
+}
+
+header2 {
+    display: inline-flex;
+    justify-content: space-evenly;
+    margin-bottom: -1rem;
+    margin-top: .5rem;
+}
+
+
+.UG_UGGText{
+    width: 50;
+    height: auto;
+}
+
+@font-face {
+    font-family: 'TransportHeavy';
+    src: url(../fonts/TransportHeavy.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TransportLight';
+    src: url(../fonts/transport-new-light.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LearningCurveBold';
+    src: url(../fonts/learning_curve_bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+.description_one {
+    margin-top: 2.5rem;
+    font-family: 'TransportHeavy';
+    font-size: 2.0rem;
+    line-height: 1.25;
+    margin-bottom: 30px;
+    letter-spacing: 0.1rem;
+    transform: scaleY(1.1), scaleX(1.1)
+}
+
+.description_two {
+    margin-top: 0.5rem;
+    font-family: 'TransportLight';
+    font-size: 1.0rem;
+    line-height: 1.25;
+    margin-bottom: 30px;
+    letter-spacing: 0.1rem;
+    transform: scaleY(1.1), scaleX(1.1)
+}
+
+h1 {
+    font-family: 'TransportHeavy';
+    color: white;
+}
+
+h2 {
+    font-family: 'TransportLight';
+}
+
+.title-text h1 {
+    font-size: 5.5rem;
+    line-height: 0.95;
+    margin: 0;
+    text-align: justify;
+    text-align-last: last;
+    letter-spacing: -0.2rem;
+}
+
+.title-text h1 .goose {
+    display: block;
+}
+
+.title-text h2 {
+    font-size: 3em;
+    margin-top: 0em;;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    pointer-events: all;
+    
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #276ebd;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.navCTA {
+    color: white;
+    pointer-events: all;
+    padding: .3rem .5rem .2rem .5rem;
+    transition: 0.2s ease;
+    background-color: transparent;
+    border-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    font-family: 'TransportHeavy';
+}
+
+header2 a{
+    color: white;
+    text-decoration: none;
+    font-family: 'TransportHeavy';
+    padding: .5rem .8rem .5rem .8rem;
+    margin: 0rem 1rem;
+    border-radius: .5rem;
+    border-color: #1d5596;
+    border-style: solid;
+    background-color: #215fa7;
+
+}
+
+iframe {
+    border-width: .3rem;
+    border-color: white;
+    border-style: solid;
+    pointer-events: all;
+
+}
+
+
+.navWrapper {
+    display: flex;
+    align-items: center;
+    pointer-events: fill;
+}
+
+.iFrameContainer {
+    position: relative;
+    width: 100%;
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
+
+/* Overview Styles */
+
+.overviewContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.overviewArticle {
+    max-width: 76ch;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.overviewBox {
+    width: 30%;
+}
+
+.overviewBox img {
+    width: 100%;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 30px 0px black;
+}
+
+.overviewBox button{
+    padding: .5rem 1rem;
+    border: 1px solid white;
+    background: none;
+    font-weight: 900;
+    color: white;
+    font-size: 1rem;
+}
+
+.overview h3 {
+    padding-bottom: 0.5rem;
+}
+
+#home a{
+    color: white;
+    pointer-events: all;
+    text-decoration: none;
+    padding: .3rem .5rem .2rem .5rem;
+    transition: 0.2s ease;
+    background-color: transparent;
+    border-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    font-family: 'TransportHeavy';
+}
+
+.heroContainer {
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+/* Media Only Screen for Mobile */
+
+@media only screen and (max-width: 640px) {
+    .header {
+        display: inline-flex;
+        white-space: nowrap;
+        justify-content: center;
+        flex-direction: row;
+        scale: .60;
+        margin-top: 1rem
+    }
+
+    .goose-sign {
+        width: 60%;
+        height: auto;
+        object-fit: contain;
+        max-width: 100%;
+        margin-left: -3.5rem;
+    
+    }
+
+    .title-text h1{
+        display: block;
+        white-space: nowrap;
+        font-size: 4.5rem;
+    }
+
+    .container {
+        flex-direction: column; 
+        padding: 1rem;
+    }
+
+
+    .description_one, .description_two {
+        margin-top: 0;
+        font-size: 1rem; 
+    }
+
+    .navWrapper {
+        display: flex;
+        align-content: center;
+        margin: 0rem -3.5rem;
+        justify-content: center;
+        transform: scale(0.8);
+    }
+
+    header2 a{
+        padding: auto auto;
+        margin: auto auto;
+        
+    }
+
+    header2 {
+        display: flex;
+        white-space: nowrap;
+        
+    }
+
+    .iFrameContainer {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1rem auto;
+        overflow: hidden;
+        aspect-ratio: 16/9;
+    }
+
+    .navCTA{
+        margin-left: 1rem;
+    }
+
+    canvas{
+        opacity: 0;
+    }
+}
