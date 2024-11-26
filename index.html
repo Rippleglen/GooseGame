@@ -3,18 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untitled Goose Game - A Honk Most Foul</title>
+    <title>Untitled Goose Game</title>
+    <link rel="preload" as="style" href="/css/style.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.png">
-    <script src="https://github.com/pmndrs/cannon-es/blob/master/dist/cannon-es.js"></script>
-    <script type="importmap">
-        {
-          "imports": {
-            "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
-            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
-          }
-        }
-    </script>
+    <link rel="preload" as="script" href="/javascript/gooseobjects.min.js">
+    <link rel="preload" as="script" href="https://github.com/pmndrs/cannon-es/blob/master/dist/cannon-es.js">
 </head>
 
 <body>
@@ -23,8 +17,8 @@
             <nav>
                 <a href="index.html">Home</a>
                 <a href="#overview">Overview</a>
-                <a href="#redeemer">Abilities</a>
-                <a href="#narrative">Campaign</a>
+                <a href="#redeemer">Gallery</a>
+                <a href="#narrative">Bonuses</a>
             </nav>
             <button class="navCTA">Pre-order</button>
         </div>
@@ -99,6 +93,19 @@
         </div>
     </section>
 
+    <script src="https://github.com/pmndrs/cannon-es/blob/master/dist/cannon-es.js" crossOrigin="anonymous"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+          }
+        }
+    </script>
+
+    <div class="canvas">
+        <script type="module" src="javascript/gooseobjects.min.js" crossOrigin="anonymous" rel="preload" as="script"></script>
+    </div>
 
 
 
@@ -106,9 +113,6 @@
 
 
 
-<div class="canvas">
-    <script type="module" src="javascript/gooseobjects.js"></script>
 
-</div>
 
 </html>
