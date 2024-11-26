@@ -252,6 +252,55 @@ iframe {
     margin-bottom: 1rem;
 }
 
+.OverviewBar {
+    padding: .5rem;
+    margin: 5% 10%;
+    border: #1F5999;
+    background: #1F5999;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 10px;
+    font-family: TransportHeavy;
+    font-size: 2ch;
+    box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.47);
+}
+
+.OverviewCardTop {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.CardOverviewCardTop p {
+    position: inherit;
+    max-width: 70%;
+    text-align: center;
+}
+
+.OverviewCardTop article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1d5596;
+    border-radius: 10px;
+    border-width: .1rem;
+}
+
+
+.CardOverviewCardTop img {
+    object-fit: cover;
+    border: #1d5596;
+    border-style: solid;
+    border-width: .5rem;
+    border-radius: 10px;
+    background-color: #1d5596;
+    max-width: 100%;
+}
+
+
 
 
 
