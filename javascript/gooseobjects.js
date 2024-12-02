@@ -140,57 +140,129 @@ const models = [];
 let savedModelPositions = {};
 
 // Check if saved positions exist in localStorage
-if (localStorage.getItem('modelPositions')) {
-  savedModelPositions = JSON.parse(localStorage.getItem('modelPositions'));
-}
 
 const loader = new GLTFLoader();
 const dracoLoader = new DRACOLoader();
 dracoLoader.setDecoderPath( 'https://www.gstatic.com/draco/versioned/decoders/1.4.1/' );
 loader.setDRACOLoader( dracoLoader );
 
-modelFilenames.forEach((filename, index) => {
-  loader.load(
-    filename,
-    function (gltf) {
-      const model = gltf.scene;
-      scene.add(model);
-      models.push(model);
+// Load saved positions from JSON file
 
-      // Create a bounding box for the model
-      const box = new THREE.Box3().setFromObject(model);
-      const size = new THREE.Vector3();
-      box.getSize(size);
-
-      // Create a physics body for the model with mass and damping
-      const shape = new CANNON.Box(new CANNON.Vec3(size.x / 2, size.y / 2, size.z / 2));
-      const body = new CANNON.Body({
-        mass: 1,  // Adjust mass for how heavy the object should feel
-        linearDamping: 0.99,  // Damping to prevent objects from moving indefinitely
-        angularDamping: 0.99,  // Damping to smooth out rotation
-        position: new CANNON.Vec3(model.position.x, model.position.y, model.position.z),
-        shape: shape,
-      });
-
-      world.addBody(body);
-      model.body = body;
-
-      // Optionally set an initial position
-      if (savedModelPositions[filename]) {
-        const pos = savedModelPositions[filename].position;
-        model.position.set(pos.x, pos.y, 0);  // Constrain model to z=0
-        model.body.position.set(pos.x, pos.y, 0);
-      } else {
-        model.position.set(Math.random() * 8 - 5, Math.random() * 4, 0);  // Ensure z=0
-        model.body.position.set(model.position.x, model.position.y, 0);
-      }
-    },
-    undefined,
-    function (error) {
-      console.error(`An error occurred while loading ${filename}:`, error);
+fetch('javascript/modelPositions.json')
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
     }
-  );
-});
+    throw new Error('Failed to load model positions.');
+  })
+  .then((data) => {
+    savedModelPositions = data; // Store the loaded positions
+
+    // Load models after positions are fetched
+    modelFilenames.forEach((filename, index) => {
+      loader.load(
+        filename,
+        function (gltf) {
+          const model = gltf.scene;
+          scene.add(model);
+          models.push(model);
+
+          // Create a bounding box for the model
+          const box = new THREE.Box3().setFromObject(model);
+          const size = new THREE.Vector3();
+          box.getSize(size);
+
+          // Create a physics body for the model
+          const shape = new CANNON.Box(new CANNON.Vec3(size.x / 2, size.y / 2, size.z / 2));
+          const body = new CANNON.Body({
+            mass: 1, // Adjust mass for how heavy the object should feel
+            linearDamping: 0.99, // Damping to prevent objects from moving indefinitely
+            angularDamping: 0.99, // Damping to smooth out rotation
+            position: new CANNON.Vec3(model.position.x, model.position.y, model.position.z),
+            shape: shape,
+          });
+
+          world.addBody(body);
+          model.body = body;
+
+          // Set position
+          if (savedModelPositions[filename]) {
+            const pos = savedModelPositions[filename].position;
+            model.position.set(pos.x, pos.y, pos.z);
+            model.body.position.set(pos.x, pos.y, pos.z);
+          } else {
+            model.position.set(Math.random() * 8 - 5, Math.random() * 4, 0); // Ensure z=0
+            model.body.position.set(model.position.x, model.position.y, 0);
+          }
+
+          // Set random rotation
+          const randomX = Math.random() * Math.PI * 2; // Random rotation around x-axis
+          const randomY = Math.random() * Math.PI * 2; // Random rotation around y-axis
+          const randomZ = Math.random() * Math.PI * 2; // Random rotation around z-axis
+          model.rotation.set(randomX, randomY, randomZ);
+
+          // Sync physics body rotation with the model
+          model.body.quaternion.setFromEuler(randomX, randomY, randomZ);
+        },
+        undefined,
+        function (error) {
+          console.error(`An error occurred while loading ${filename}:`, error);
+        }
+      );
+    });
+  })
+  .catch((error) => {
+    console.error('Error loading saved model positions:', error);
+
+    // If positions fail to load, still load models with default random positioning and rotation
+    modelFilenames.forEach((filename, index) => {
+      loader.load(
+        filename,
+        function (gltf) {
+          const model = gltf.scene;
+          scene.add(model);
+          models.push(model);
+
+          // Create a bounding box for the model
+          const box = new THREE.Box3().setFromObject(model);
+          const size = new THREE.Vector3();
+          box.getSize(size);
+
+          // Create a physics body for the model
+          const shape = new CANNON.Box(new CANNON.Vec3(size.x / 2, size.y / 2, size.z / 2));
+          const body = new CANNON.Body({
+            mass: 1,
+            linearDamping: 0.99,
+            angularDamping: 0.99,
+            position: new CANNON.Vec3(model.position.x, model.position.y, model.position.z),
+            shape: shape,
+          });
+
+          world.addBody(body);
+          model.body = body;
+
+          // Default random positioning
+          model.position.set(Math.random() * 8 - 5, Math.random() * 4, 0); // Ensure z=0
+          model.body.position.set(model.position.x, model.position.y, 0);
+
+          // Set random rotation
+          const randomX = Math.random() * Math.PI * 2;
+          const randomY = Math.random() * Math.PI * 2;
+          const randomZ = Math.random() * Math.PI * 2;
+          model.rotation.set(randomX, randomY, randomZ);
+
+          // Sync physics body rotation with the model
+          model.body.quaternion.setFromEuler(randomX, randomY, randomZ);
+        },
+        undefined,
+        function (error) {
+          console.error(`An error occurred while loading ${filename}:`, error);
+        }
+      );
+    });
+  });
+
+
 
 
 
@@ -324,13 +396,13 @@ function onMouseMove(event) {
   }
 }
 
-// Function to save model positions
 function saveModelPositions() {
   const positions = {};
+
+  // Collect positions and rotations of models
   models.forEach((model, index) => {
     const filename = modelFilenames[index];
 
-    // Save position and rotation
     positions[filename] = {
       position: {
         x: model.position.x,
@@ -346,10 +418,32 @@ function saveModelPositions() {
     };
   });
 
-  // Save to localStorage
-  localStorage.setItem('modelPositions', JSON.stringify(positions));
-  console.log('Model positions saved to localStorage.');
+  // Log the data to the console for debugging
+  console.log('Model positions:', JSON.stringify(positions, null, 2));
+
+  // Send the data to the server
+  fetch('https://backend.andreasrp.com/save-model-positions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(positions),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Server responded with status ${response.status}`);
+      }
+      return response.text();
+    })
+    .then((data) => {
+      console.log('Server response:', data);
+    })
+    .catch((error) => {
+      console.error('Error sending model positions to the server:', error);
+    });
 }
+
+
 
 // Expose the save function to the global scope
 window.saveModelPositions = saveModelPositions;
