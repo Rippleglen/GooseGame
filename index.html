@@ -4,14 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Untitled Goose Game</title>
-    <link rel="preload" as="style" href="/css/style.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/favicon.png">
-    <link rel="preload" as="script" href="/javascript/gooseobjects.min.js">
-    <link rel="preload" as="script" href="https://github.com/pmndrs/cannon-es/blob/master/dist/cannon-es.js">
-    <link rel="preload" as="font" href="fonts/learning_curve_bold.ttf">
-    <link rel="preload" as="font" href="fonts/TransportHeavy.ttf">
-    <link rel="preload" as="font" href="fonts/transport-new-light.ttf">
+    <link rel="stylesheet" href="../GooseGame/css/style.css">
+    <link rel="icon" href="../GooseGame/img/favicon.webp">
 </head>
 
 <body>
@@ -30,7 +24,7 @@
     
     <header>
         <div class="header">
-            <img src="img/HMF-GooseGameLogo.svg" class="goose-sign" alt="A triangular warning sign, with a red border, white infill and a silhouette of a goose inside of it.">
+            <img src="../GooseGame/img/HMF-GooseGameLogo.webp" class="goose-sign" alt="A triangular warning sign, with a red border, white infill and a silhouette of a goose inside of it.">
             <div class="title-text">
                 <h1>Untitled<br><span class="goose">Goose Game</span></h1>
                 <h2>by House House</h2>
@@ -62,38 +56,28 @@
         </div>
         <section class="OverviewCardTop">
             <article class="CardOverviewCardTop">
-                <img src="/img/mapimg.png" alt="">
+                <img src="../GooseGame/img/CardMapImg.webp" loading="lazy" alt="">
                 <p class="OverviewCardTitle">The Village of Alfrwick</p>
                 <p>Canals, Pubs, Model Villages and Unsuspecting Members of the Public.</p>
                 <p>A Honk Most Foul has a new map for you to explore!</p>
             </article>
             <article class="CardOverviewCardTop">
-                <img src="/img/coopimg.png" alt="">
+                <img src="../GooseGame/img/CardCoOpImg.webp" loading="lazy" alt="">
                 <p class="OverviewCardTitle">Online Multiplayer</p>
                 <p>Following on from the split screen co-op update. A Honk Most Foul will allow for you and your best mate to enjoy the game, even if they're in the Caribbean!</p>
             </article>
         </section>
         <section class="OverviewCardBottom">
             <article class="CardOverviewCardBottom">
-                <img src="img/goosemap.png" alt="">
+                <img src="../GooseGame/img/questeditor.webp" loading="lazy" alt="">
                 <p class="OverviewCardTitle"> The Map & Quest Editor</p>
                 <p>A Honk Most Foul will bring a revolutionary new map and quest editor. Players will be  able to modify the base game and DLC map, as well as create custom quests.</p>
             </article>
         </section>
     </section>
 
-    <script src="https://github.com/pmndrs/cannon-es/blob/master/dist/cannon-es.js"></script>
-    <script type="importmap">
-        {
-          "imports": {
-            "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
-            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
-          }
-        }
-    </script>
-
     <div class="canvas">
-        <script type="module" src="/javascript/gooseobjects.min.js"></script>
+        <script type="module" src="../GooseGame/javascript/main.934ad59d94d5cdffedbb.js"></script>
     </div>
 
 

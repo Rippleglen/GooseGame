@@ -61,23 +61,26 @@ header2 {
 
 @font-face {
     font-family: 'TransportHeavy';
-    src: url(../fonts/TransportHeavy.ttf);
+    src: url(../fonts/transportheavy-webfont.woff2);
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'TransportLight';
-    src: url(../fonts/transport-new-light.ttf);
+    src: url(../fonts/transport-new-light-webfont.woff2);
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'LearningCurveBold';
-    src: url(../fonts/learning_curve_bold.ttf);
+    src: url(../fonts/learning_curve_bold-webfont.woff2);
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 .description_one {
@@ -299,7 +302,7 @@ iframe {
     border-width: .5rem;
     border-radius: 10px;
     background-color: #1d5596;
-    max-width: 100%;
+    height: auto;
 }
 
 .OverviewCardBottom {
@@ -309,7 +312,6 @@ iframe {
     padding-top: 2rem;
     padding-left: 0%;
     padding-right: 0%;
-    max-width: 100%;
 }
 
 .CardOverviewCardBottom p {
@@ -327,7 +329,6 @@ iframe {
     background-color: #1d5596;
     border-radius: 10px;
     border-width: .1rem;
-    max-width: 60%;
 }
 
 
@@ -338,7 +339,7 @@ iframe {
     border-width: .5rem;
     border-radius: 10px;
     background-color: #1d5596;
-    max-width: 100%;
+    height: auto;
 }
 
 .OverviewCardTitle {
