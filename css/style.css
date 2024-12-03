@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .goose-sign {
@@ -59,29 +60,6 @@ header2 {
     height: auto;
 }
 
-@font-face {
-    font-family: 'TransportHeavy';
-    src: url(../fonts/transportheavy-webfont.woff2);
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'TransportLight';
-    src: url(../fonts/transport-new-light-webfont.woff2);
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'LearningCurveBold';
-    src: url(../fonts/learning_curve_bold-webfont.woff2);
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 
 .description_one {
     margin-top: 2.5rem;
@@ -90,7 +68,6 @@ header2 {
     line-height: 1.25;
     margin-bottom: 30px;
     letter-spacing: 0.1rem;
-    transform: scaleY(1.1), scaleX(1.1)
 }
 
 .description_two {
@@ -100,7 +77,6 @@ header2 {
     line-height: 1.25;
     margin-bottom: 30px;
     letter-spacing: 0.1rem;
-    transform: scaleY(1.1), scaleX(1.1)
 }
 
 h1 {
@@ -131,11 +107,10 @@ h2 {
 }
 
 canvas {
-    width: 100%;
-    height: 100%;
-    position: fixed;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
     top: 0;
-    left: 0;
     z-index: -2;
     pointer-events: all;
     
@@ -160,6 +135,13 @@ html {
     border-radius: 10px;
     border-style: solid;
     font-family: 'TransportHeavy';
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.navCTA:hover {
+    background-color: white;
+    color: #1d5596;
 }
 
 header2 a{
@@ -173,6 +155,12 @@ header2 a{
     border-style: solid;
     background-color: #215fa7;
 
+}
+
+header2 a:hover{
+    background-color: white;
+    color: #1d5596;
+    border-color: white;
 }
 
 iframe {
@@ -201,43 +189,6 @@ iframe {
     aspect-ratio: 16/9;
 }
 
-/* Overview Styles */
-
-.overviewContainer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.overviewArticle {
-    max-width: 76ch;
-    margin: 0 auto;
-    justify-content: center;
-}
-
-.overviewBox {
-    width: 30%;
-}
-
-.overviewBox img {
-    width: 100%;
-    margin-bottom: 1rem;
-    box-shadow: 4px 4px 30px 0px black;
-}
-
-.overviewBox button{
-    padding: .5rem 1rem;
-    border: 1px solid white;
-    background: none;
-    font-weight: 900;
-    color: white;
-    font-size: 1rem;
-}
-
-.overview h3 {
-    padding-bottom: 0.5rem;
-}
-
 #home a{
     color: white;
     pointer-events: all;
@@ -251,13 +202,18 @@ iframe {
     font-family: 'TransportHeavy';
 }
 
+.header img {
+    pointer-events: all;
+    cursor: pointer;
+}
+
 .heroContainer {
     margin-bottom: 1rem;
 }
 
-.OverviewBar {
+.SectionBar {
     padding: .5rem;
-    margin: 5% 20%;
+    margin: 3% 20%;
     border: #1F5999;
     background: #1F5999;
     border-style: solid;
@@ -268,85 +224,7 @@ iframe {
     box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.47);
 }
 
-.OverviewCardTop {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 5%;
-    padding-left: 20%;
-    padding-right: 20%;
-}
 
-.CardOverviewCardTop p {
-    position: inherit;
-    max-width: 70%;
-    text-align: center;
-    font-family: TransportLight;
-    margin-bottom: 1%;
-}
-
-.OverviewCardTop article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #1d5596;
-    border-radius: 10px;
-    border-width: .1rem;
-}
-
-
-.CardOverviewCardTop img {
-    object-fit: cover;
-    border: #1d5596;
-    border-style: solid;
-    border-width: .5rem;
-    border-radius: 10px;
-    background-color: #1d5596;
-    height: auto;
-}
-
-.OverviewCardBottom {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    padding-top: 2rem;
-    padding-left: 0%;
-    padding-right: 0%;
-}
-
-.CardOverviewCardBottom p {
-    position: inherit;
-    max-width: 70%;
-    text-align: center;
-    font-family: TransportLight;
-    margin-bottom: 1%;
-}
-
-.OverviewCardBottom article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #1d5596;
-    border-radius: 10px;
-    border-width: .1rem;
-}
-
-
-.CardOverviewCardBottom img {
-    object-fit: cover;
-    border: #1d5596;
-    border-style: solid;
-    border-width: .5rem;
-    border-radius: 10px;
-    background-color: #1d5596;
-    height: auto;
-}
-
-.OverviewCardTitle {
-    font-family: TransportLight;
-    font-weight: 1000;
-    font-size: 1.3rem;
-}
 
 
 
@@ -358,7 +236,12 @@ iframe {
 
 /* Media Only Screen for Mobile */
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 767px) {
+
+    html {
+        -webkit-overflow-scrolling: hidden;
+    }
+
     .header {
         display: inline-flex;
         white-space: nowrap;
@@ -415,12 +298,9 @@ iframe {
     }
 
     .iFrameContainer {
+        display: flex;
         position: relative;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 1rem auto;
+        max-width: 90%;
         overflow: hidden;
         aspect-ratio: 16/9;
     }
@@ -430,6 +310,12 @@ iframe {
     }
 
     canvas{
-        opacity: 0;
+        display: none;
+        visibility: hidden;
+    }
+
+    .SectionBar {
+        max-width: 100%;
+        margin: 8% 0;
     }
 }

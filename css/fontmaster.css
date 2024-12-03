@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'TransportHeavy';
+    src: url(../fonts/transportheavy-webfont.woff2);
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TransportLight';
+    src: url(../fonts/transport-new-light-webfont.woff2);
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LearningCurveBold';
+    src: url(../fonts/learning_curve_bold-webfont.woff2);
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
