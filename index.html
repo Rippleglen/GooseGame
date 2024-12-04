@@ -4,13 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Untitled Goose Game</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/slideshow.css">
-    <link rel="stylesheet" href="/css/bonuses.css">
-    <link rel="stylesheet" href="/css/subscribe.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/fontmaster.css">
-    <link rel="stylesheet" href="/css/overview.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="/img/favicon.webp">
 </head>
 
@@ -33,11 +27,7 @@
     <section id="home">
         <header>
             <div class="header">
-                <img src="/img/HMF-GooseGameLogo.webp" onclick="playSound()" class="goose-sign" alt="A triangular warning sign, with a red border, white infill and a silhouette of a goose inside of it.">
-                <div class="title-text">
-                    <h1>Untitled<br><span class="goose">Goose Game</span></h1>
-                    <h2>by House House</h2>
-                </div>
+                <img src="img/HeaderUGGLogo.webp" onclick="playSound()" class="goose-sign" alt="A triangular warning sign, with a red border, white infill and a silhouette of a goose inside of it.">
             </div>
             <div class="description_one">
                 <p>It's a lovely morning in the village,<br> and you are.. <span style="font-family: 'LearningCurveBold'; font-size: 3rem;">still</span> ..a horrible goose.</p>
@@ -61,20 +51,20 @@
         </div>
         <section class="OverviewCardTop">
             <article class="CardOverviewCardTop">
-                <img src="/img/CardMapImg.webp" loading="lazy" alt="">
+                <img src="img/CardMapImg.webp" loading="lazy" alt="">
                 <p class="OverviewCardTitle">The Village of Alfrwick</p>
                 <p>Canals, Pubs, Model Villages and Unsuspecting Members of the Public.</p>
                 <p>A Honk Most Foul has a new map for you to explore!</p>
             </article>
             <article class="CardOverviewCardTop">
-                <img src="/img/CardCoOpImg.webp" loading="lazy" alt="">
+                <img src="img/CardCoOpImg.webp" loading="lazy" alt="">
                 <p class="OverviewCardTitle">Online Multiplayer</p>
                 <p>Following on from the split screen co-op update. A Honk Most Foul will allow for you and your best mate to enjoy the game, even if they're in the Caribbean!</p>
             </article>
         </section>
         <section class="OverviewCardBottom">
             <article class="CardOverviewCardBottom">
-                <img src="/img/questeditor.webp" loading="lazy" alt="">
+                <img src="img/questeditor.webp" loading="lazy" alt="">
                 <p class="OverviewCardTitle"> The Map & Quest Editor</p>
                 <p>A Honk Most Foul will bring a revolutionary new map and quest editor. Players will be  able to modify the base game and DLC map, as well as create custom quests.</p>
             </article>
@@ -94,17 +84,17 @@
          
             <div class="mySlides fade">
                 <div class="numbertext">1 / 3</div>
-                <img loading="lazy" src="/img/slideshow/slide1.jpg" style="width:100%">
+                <img loading="lazy" src="img/slideshow/slide1.jpg" style="width:100%">
             </div>
   
             <div class="mySlides fade">
                 <div class="numbertext">2 / 3</div>
-                <img loading="lazy" src="/img/slideshow/slide2.webp" style="width:100%">
+                <img loading="lazy" src="img/slideshow/slide2.webp" style="width:100%">
             </div>
   
             <div class="mySlides fade">
                 <div class="numbertext">3 / 3</div>
-                <img loading="lazy" src="/img/slideshow/slide3.png" style="width:100%">
+                <img loading="lazy" src="img/slideshow/slide3.png" style="width:100%">
             </div>
   
             <!-- Next and previous buttons -->
@@ -130,7 +120,7 @@
         </div>
         <section class="BonusSection">
             <article class="PreorderCard">
-                <img src="/img/CardMapImg.webp" loading="lazy" alt="">
+                <img src="img/CardMapImg.webp" loading="lazy" alt="">
                 <p>Pre-Order the Standard Edition today, and get these exclusive discounts!</p>
                 <hr>
                 <ul id="PreStandard">
@@ -142,7 +132,7 @@
                 </ul>
             </article>
             <article class="PreorderCard">
-                <img src="/img/CardCoOpImg.webp" loading="lazy" alt="">
+                <img src="img/CardCoOpImg.webp" loading="lazy" alt="">
                 <p>Pre-Order the Fancy Edition today, and get these exclusive discounts!</p>
                 <hr>
                 <ul id="PreFancy">
@@ -162,7 +152,8 @@
             <h3>A Honk Most Foul</h3>
             
             <form class="newsletter-form">
-              <input type="email" placeholder="Enter your email, you know, for updates?" required>
+                <label for="email">Email:</label>
+              <input type="email" name="email" placeholder="Enter your email, you know, for updates?" required>
               <button type="submit">Subscribe</button>
             </form>
             
@@ -173,32 +164,34 @@
         </div>
     </section>
 
-    <div class="navbar">
-        <div class="navbar-left">
-          <img loading="lazy" src="img/househouse.webp" alt="Icon 1" class="icon">
-          <img loading="lazy" src="img/panic.webp" alt="Icon 2" class="icon">
-          <span id="CpyRght">© House House in cooperation with Panic</span>
+    <footer>
+        <div class="navbar">
+            <div class="navbar-left">
+              <img loading="lazy" src="img/househouse.webp" alt="Icon 1" class="icon">
+              <img loading="lazy" src="img/panic.webp" alt="Icon 2" class="icon">
+              <span id="CpyRght">© House House in cooperation with Panic</span>
+            </div>
+            <div class="navbar-center">
+              <span class="dot">•</span>
+              <a href="https://goose.game/presskit/" class="link">Press Kit</a>
+              <span class="dot">•</span>
+              <a href="https://goose.game/credits/" class="link">Credits</a>
+            </div>
+            <div class="navbar-right">
+              <button class="home-button">
+                <span>Home</span>
+              </button>
+            </div>
         </div>
-        <div class="navbar-center">
-          <span class="dot">•</span>
-          <a href="https://goose.game/presskit/" class="link">Press Kit</a>
-          <span class="dot">•</span>
-          <a href="https://goose.game/credits/" class="link">Credits</a>
-        </div>
-        <div class="navbar-right">
-          <button class="home-button">
-            <span>Home</span>
-          </button>
-        </div>
-    </div>
+    </footer>
 
     <br>
       
  
 
-    <script src="/javascript/slideshow.js"></script>
+    <script src="javascript/slideshow.js"></script>
     <div class="canvas">
-        <script type="module" src="/javascript/main.934ad59d94d5cdffedbb.js"></script>
+        <script type="module" src="javascript/main.934ad59d94d5cdffedbb.js"></script>
     </div>
     <script>
         function playSound() {

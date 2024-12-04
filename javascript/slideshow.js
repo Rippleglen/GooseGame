@@ -38,3 +38,43 @@ document.querySelector('.navbar').addEventListener('click', () => {
   const subscribeSection = document.querySelector('#headerhome');
   subscribeSection.scrollIntoView({ behavior: 'smooth' });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const canvas = document.querySelector('canvas');
+  const overlayElements = document.querySelectorAll('.header img, .navCTA, .navWrapper a .navWrapper nav');
+
+
+
+  if (canvas) {
+      let isDragging = false;
+
+
+      function setPointerEvents(state) {
+          overlayElements.forEach((element) => {
+              element.style.pointerEvents = state ? 'auto' : 'none';
+          });
+      }
+
+
+      canvas.addEventListener('mousedown', (event) => {
+          isDragging = true;
+          setPointerEvents(false);
+      });
+
+      canvas.addEventListener('mouseup', (event) => {
+          isDragging = false;
+          setPointerEvents(true);
+      });
+
+      canvas.addEventListener('mousemove', (event) => {
+          if (isDragging) {
+          }
+      });
+  } else {
+      console.error("WHERE THE CANVAS AT BRO");
+  }
+});
+
+
+
+
