@@ -29,21 +29,18 @@ function showSlides(n) {
 
 setInterval(() => { plusSlides(1); }, 10000); // Automatically change slide every 5 seconds
 
-document.querySelector('.navCTA').addEventListener('click', () => {
-  const subscribeSection = document.querySelector('#subscribe');
-  subscribeSection.scrollIntoView({ behavior: 'smooth' });
-});
 
 document.querySelector('.navbar').addEventListener('click', () => {
   const subscribeSection = document.querySelector('#headerhome');
   subscribeSection.scrollIntoView({ behavior: 'smooth' });
 });
 
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const canvas = document.querySelector('canvas');
   const overlayElements = document.querySelectorAll('.header img, .navCTA, .navWrapper a .navWrapper nav');
-
-
 
   if (canvas) {
       let isDragging = false;
