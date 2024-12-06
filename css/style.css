@@ -37,17 +37,11 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
 .goose-sign {
-    width: 13%;
-    height: auto;
-    object-fit: contain;
-    max-width: 90vw;
     padding: .5rem;
-
 }
 
 .container {
@@ -60,32 +54,85 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: TransportLight;
     color: white;
     text-align: center;
     padding: 20px;
-    z-index: -2;
-    user-select: none;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none;    /* Firefox */
-    -ms-user-select: none; 
     pointer-events: none;
-    width: 100%;
-    height: 100%;
 
 }
 
-.header {
+header {
+    max-width: 50%;
+    height: 80px;
+    margin: 0 auto;
+    background-color: #1f5999;
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
+    justify-content: center;
+    padding: 0 100px;
+    border-radius: 10px;
 }
 
-.header img {
-    width: 40%;
-    position: relative;
-    z-index: 10;
+.hamborger {
+    display: none;
+}
+
+.HeaderNavBar ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: .9rem;
+}
+
+.HeaderNavBar ul li a {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    background: none;
+    color: white;
+    font-size: 1rem;
+    padding: .5rem .5rem;
+    text-wrap: nowrap;
+    transform: 0.2s;
+    margin: auto calc(.1vw + .1vh);
+    
+    
+}
+
+.HeaderNavBar li {
+   
+    background-color: #276ebd;
+    border: #276ebd;
+    border-radius: 10px;
+    border-style: solid;
+    padding: .3rem;
+    pointer-events: auto;
+    cursor: pointer;
+
+}
+
+.HeaderNavBar li:hover {
+    background-color: white;
+    border-color: white;
+}
+
+.HeaderNavBar li:hover > a {
+    background-color: white;
+    color: #1d5596;
+    border-color: white;
+}
+
+
+
+
+
+.gooselogo img {
+    margin-right : auto;
+    margin-left : auto;
+    min-width : 10%;
+    max-width : 70%;
+    width:auto;
     pointer-events: auto;
     cursor: pointer;
 }
@@ -116,22 +163,20 @@ body {
 
 
 canvas {
-    max-width: 100vw;
-    max-height: 100vh;
-    position: absolute;
+    margin: 0;
+    padding: 0;
+    position: fixed;
     top: 0;
+    left: 0;
     z-index: -2;
     pointer-events: auto;
+    height: auto;
+    width: 100%;
     
 }
 
 html {
-    margin: 0;
-    padding: 0;
     background-color: #276ebd;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
 }
 
 .navCTA {
@@ -153,7 +198,7 @@ html {
     color: #1d5596;
 }
 
-.header2 a{
+.gooselogo2 a{
     color: white;
     text-decoration: none;
     font-family: 'TransportHeavy';
@@ -166,7 +211,7 @@ html {
 
 }
 
-.header2 a:hover{
+.gooselogo2 a:hover{
     background-color: white;
     color: #1d5596;
     border-color: white;
@@ -177,6 +222,7 @@ iframe {
     border-color: white;
     border-style: solid;
     pointer-events: all;
+    box-sizing: border-box;
 
 }
 
@@ -197,6 +243,8 @@ iframe {
     margin: 1rem auto;
     overflow: hidden;
     aspect-ratio: 16/9;
+    box-sizing: border-box;
+
 }
 
 #home a{
@@ -250,9 +298,10 @@ iframe {
     position: inherit;
     text-align: center;
     font-family: TransportLight;
-    margin-bottom: 1%;
+    margin-bottom: 3%;
     max-width: 100%;
     max-height: 100%;
+    padding: 0 1rem;
 }
 
 .OverviewCardTop article {
@@ -275,7 +324,7 @@ iframe {
     border-radius: 10px;
     background-color: #1d5596;
     width: 100%;
-    height: 100%;
+    box-sizing: border-box;
 }
 
 .OverviewCardBottom {
@@ -294,6 +343,7 @@ iframe {
     margin-bottom: 1%;
     max-width: 100%;
     max-height: 100%;
+    padding: 0 1rem;
 }
 
 .OverviewCardBottom article {
@@ -317,6 +367,7 @@ iframe {
     background-color: #1d5596;
     width: 100%;
     height: 100%;
+    box-sizing: border-box;
 }
 
 .OverviewCardTitle {
@@ -333,7 +384,7 @@ iframe {
 /*----------------------------------------------------------------------*/
 /*THIS SECTION OF CSS CONTROLS FROM THE GALLERY TO THE PRE-ORDER BONUSES SECTION*/
 
-* {box-sizing:border-box}
+
 
 .slideshow-container {
   width: 60%;
@@ -355,6 +406,7 @@ iframe {
   border-style: solid;
   border-width: .5rem;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
 
@@ -428,7 +480,7 @@ iframe {
   transition: background-color 1s ease;
 }
 
-.active, .slidedot:hover {
+.dotactive, .slidedot:hover {
     background-color: #ffffff;
 }
 
@@ -486,9 +538,11 @@ iframe {
     position: inherit;
     text-align: center;
     font-family: TransportLight;
-    margin: 0 1% 3% 1%;
+    margin: 2% 1% 3% 1%;
+    padding: 0 .5rem;
     max-width: 100%;
     max-height: 100%;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -518,19 +572,22 @@ iframe {
     border-width: .5rem;
     border-radius: 10px;
     background-color: #1d5596;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .PreorderCard #PreFancy, #PreStandard{
     text-align: left;
-    line-height: 1.5rem;
+    line-height: 2rem;
+    padding-left: 2rem;
 }
 
 .PreorderCard ul {
     margin-bottom: 5%;
     max-width: 100%;
     padding: 1.5rem;
+    font-size: 1.4rem;
+    list-style-position: inside;
 
 }
 
@@ -555,7 +612,7 @@ iframe {
 }
   
 .newsletter h2 {
-    font-size: 24px;
+    font-size: 1.8rem;
     margin-bottom: 5px;
     font-family: TransportHeavy;
 }
@@ -628,16 +685,21 @@ iframe {
 /*THIS SECTION OF CSS CONTROLS FROM THE FOOTER SECTION*/
 
 
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
   
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1E5DAE;
+    background-color: #1d5596;
     border-radius: 0.5rem;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     color: white;
-    font-size: 1rem;
+    font-size: 1.2vw;
     width: 60%;
     margin: 0 auto;
     pointer-events: all;
@@ -646,11 +708,11 @@ iframe {
 .navbar-left {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .5vw;
 }
 
 .navbar-left span {
-    padding-left: 15%;
+    padding-left: 3%;
     white-space: nowrap;
 }
 
@@ -685,12 +747,13 @@ iframe {
 .home-button {
     display: flex;
     align-items: center;
-    background-color: #f5f5f5;
-    color: #1E5DAE;
+    background-color: #1d5596;
+    color: #ffffff;
     border: none;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 1rem 2rem;
     cursor: pointer;
+    pointer-events: auto;
     font-weight: bold;
     font-size: 1rem;
     
@@ -704,7 +767,7 @@ iframe {
 
 .home-button:hover {
     background-color: #e0e0e0;
-    pointer-events: all;
+    pointer-events: auto;
 }
 
 
@@ -726,11 +789,29 @@ iframe {
 
 @media only screen and (max-width: 785px) {
 
-    html {
-        -webkit-overflow-scrolling: hidden;
+    .hamborger {
+        display: block;
+        margin-top: 10px;
+        align-self: flex-start;
+        pointer-events: all;
+        cursor: pointer;
+        background-color: #276ebd;
+        border: #276ebd;
+        border-style: solid;
+        border-radius: 10px;
+        padding: 0.2rem .5rem;
     }
 
-    .header {
+    .hamborger:hover .footlettuce path {
+        fill: #1d5596;
+    }
+
+    .hamborger:hover {
+        background-color: white;
+        border-color: white;
+    }
+
+    .gooselogo {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -738,12 +819,54 @@ iframe {
         width: 100%;
     }
 
-    .header img {
-        width: 100%;
-        margin: 0 auto;
+    .gooselogo img {
+        margin-right : auto;
+        margin-left : auto;
+        min-width : 200px;
+        max-width : 500px;
+        width:auto;
+    }
+
+    .HeaderNavBar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+
+    .HeaderNavBar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s ease-in-out;
+        opacity: 0; /* 0 for uncascaded | 100 for cascaded */
+    }
+
+    header {
+        height: 72px; /*72px for uncascaded | 395px for cascaded*/
+        align-items: flex-start;
+        transition: .5s ease-in-out;
+    }
+
+    header.active {
+        height: 395px;
+    }
+
+    header.active ul {
+        opacity: 100;
+    }
+
+    header li {
+        margin: 10px auto;
+    }
+
+    header a {
+        pointer-events: auto;
     }
     
-
     .container {
         flex-direction: column; 
         padding: 1rem;
@@ -772,20 +895,6 @@ iframe {
     
     }
 
-    .navWrapper {
-        margin: 0 auto;
-    }
-
-    .navWrapper nav {
-        display: flex;
-        gap: 1%;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-
-
     .iFrameContainer {
         display: flex;
         position: relative;
@@ -808,17 +917,20 @@ iframe {
         margin: 8% 0;
     }
 
+
     .navbar {
+        justify-content: center;
         flex-direction: column;
         width: 100%;
         font-size: 0.9rem;
-        margin: 5% auto 10% auto;
+        margin: 8% auto 0 auto;
+        box-sizing: border-box;
     }
 
     .navbar-left, .navbar-center, .navbar-right {
         flex-direction: row;
         align-items: center;
-        gap: 0.5rem;
+        pointer-events: auto;
     }
 
     .navbar-left span {
@@ -826,14 +938,14 @@ iframe {
         text-align: center;
     }
 
+    .navbar-left .icon {
+        display: none;
+        visibility: 0;
+    }
+
     .icon {
         width: 1.5rem;
         height: 1.5rem;
-    }
-
-    .home-button {
-        padding: 0.8rem 1.2rem;
-        font-size: 0.9rem;
     }
 
     .navbar img {
@@ -843,11 +955,16 @@ iframe {
 
     .newsletter {
         max-width: 100%;
-        width: 100%;
+        width: 90%;
+        margin: auto auto;
+    }
+
+    .newsletter label {
+        text-wrap: nowrap;
     }
 
     .slideshow-container{
-        margin: auto 0;
+        margin: auto auto;
         width: 100%;
     }
 
