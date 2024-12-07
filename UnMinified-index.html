@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Untitled Goose Game</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="/img/favicon.webp">
+</head>
+
+<body>
+    <!---->
+    <!--This is the header which contains the navbar as well as the hidden Hamburger icon for when the display is less than 785px wide-->
+    <!---->    
+    <header id="topoftheworld">
+  
+        <div class="hamborger">
+            <svg class="footlettuce" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#ffffff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </div>
+        <nav class="HeaderNavBar">
+            <ul class=".navbutton">
+                <li class="navbutton" onclick="scrollToSection('topoftheworld')">
+                    <a class="navbutton" href="#topoftheworld">Home</a>
+                </li>
+                <li class="navbutton" onclick="scrollToSection('overview')">
+                    <a class="navbutton" href="#overview"">Overview</a>               <!-- As the A tags are within li tags, if the user doesn't click exactly on the a tag, it won't scroll, so the onlick on the li tag is used incase the user clicks on the li and not the a tag -->
+                </li>
+                <li class="navbutton" onclick="scrollToSection('gallery')">
+                    <a class="navbutton" href="#gallery">Gallery</a>
+                </li>
+                <li class="navbutton" onclick="scrollToSection('preorder')">
+                    <a class="navbutton" href="#preorder">Bonuses</a>
+                </li>
+                <li class="navbutton" onclick="scrollToSection('subscribe')">
+                    <a class="navbutton" href="#subscribe">Pre-Order</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <!---->
+    <!--Below is the main section which contains all of the html sandwiched between the header and footer-->
+    <!---->
+    <main>
+        <section id="home"> <!-- This part is the home section which goes from the UGG logo to the start of the overview section bar -->
+            <div>
+                <div class="gooselogo">
+                    <img src="img/HeaderUGGLogo.webp" onclick="playSound()" class="goose-sign" alt="Logo for Untitled Goose Game by House House. Features a blue background with white text. On the left, there is a triangular warning sign with a red border, white center, and a black silhouette of a goose.">
+                </div>
+                <div class="description_one">
+                    <p>It's a lovely morning in the village,<br> and you are.. <span style="font-family: 'LearningCurveBold'; font-size: 3rem;">still</span> ..a horrible goose.</p>
+                </div>
+                <div class="description_two">
+                    <p>After being unlawfully evicted, you're on a journey to a wildlife reserve.<br>
+                    But, you, the <span style="font-family: 'LearningCurveBold'; font-size: 1.5rem;">horrible</span> goose you're, have your own plans.</p>
+                </div>
+                <div class="iFrameContainer">
+                    <iframe class="RiFrame" src="https://www.youtube-nocookie.com/embed/sUPrXJAgluA?modestbranding=1&rel=0&fs=0&disablekb=1" width="100%" height="100%" title="Untitled Goose Game - Gameplay Trailer" frameborder="0" allowfullscreen="0"></iframe>
+                </div>
+            </div>
+        
+            <div class="hero backgroundImage fullheight" id="heroImage"></div>
+        </section>
+        
+        <section id="overview" class="hero"> <!-- The overview section contains all the information about what the DLC adds as well as pictures, it's split into the top overview and bottom overview, with the top having 2 cards and the bottom having 1.  -->
+            <div class="SectionBar">
+                The Overview
+            </div>
+            <section class="OverviewCardTop">
+                <article class="CardOverviewCardTop">
+                    <img src="img/CardMapImg.webp" loading="lazy" alt="">
+                    <p class="OverviewCardTitle">The Village of Alfrwick</p>
+                    <p>Canals, Pubs, Model Villages and Unsuspecting Members of the Public. A Honk Most Foul has a new map for you to explore!</p>
+                </article>
+                <article class="CardOverviewCardTop">
+                    <img src="img/GooseOnlineStatic.webp" id="GooseModem" onclick="playModemSound()" style="pointer-events: auto; cursor: pointer;" loading="lazy" alt="A retro-styled graphic with a teal background, titled 'Geese Online' in a blue bar at the top. The image shows a server on the left and an old-fashioned yellow rotary phone on the right, with a white goose standing behind it. The background features a repeating pattern of goose icons on a blue backdrop.">
+                    <p class="OverviewCardTitle">Online Multiplayer</p>
+                    <p>Following on from the split screen co-op update. A Honk Most Foul will allow for you and your best mate to enjoy the game, even if they're in the Caribbean!</p>
+                </article>
+            </section>
+            <section class="OverviewCardBottom">
+                <article class="CardOverviewCardBottom">
+                    <img src="img/questeditor.webp" loading="lazy" alt="An aerial view of a colorful cel-shaded cartoon town layout featuring various buildings, trees, paths, and water features. Overlaid on the image in large white text is 'Untitled Goose Game', with smaller text to the right reading 'Quest & Map Editor'.">
+                    <p class="OverviewCardTitle"> The Map & Quest Editor</p>
+                    <p>A Honk Most Foul will bring a revolutionary new map and quest editor. Players will be  able to modify the base game and DLC map, as well as create custom quests.</p>
+                </article>
+            </section>
+        </section>
+        
+        <section id="gallery"> <!-- The gallery contains 3 animated webp images, which will switch every 10 seconds, they can also be switched by the user by using the next and previous arrows as well as clicking on the dots which show which slide image is being displayed -->
+            <div class="SectionBar">
+                The Gallery
+            </div>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+        
+            <!-- Full-width images with number and caption text -->
+        
+                <div class="mySlides fade">
+                    <img loading="lazy" src="img/slideshow/slide1.webp" alt="A animated WEB P of the Goose from Untitled Goose Game wearing a glass milk bottle on its beak whilst honking at a boy and scaring him. When the Goose honks, the boy drops to the floor and covers his head." style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img loading="lazy" src="img/slideshow/slide2.webp" alt="A animated WEB P of the Goose from Untitled Goose Game scaring a man who is hammering a 'no goose' sign into grass, the man accidentally hits his thumb with the hammmer, when the Goose honks." style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img loading="lazy" src="img/slideshow/slide3.webp" alt="A animated WEB P of the Goose from Untitled Goose Game scaring a man who is sat reading a newspaper on his garden patio, the man drops the newspaper and flinches, when the Goose honks." style="width:100%">
+                </div>
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>  <!-- When a previous or next arrow is clicked, the plusSlides function in slideshow.js will be ran, -1 or 1 will be sent to function too so that it knows wether to progress the slideshow forwards or backwards -->
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                 <!-- The dots/circles -->
+                <div style="text-align:center; padding-bottom: .5rem;">
+                    <span class="slidedot" onclick="currentSlide(1)"></span>
+                    <span class="slidedot" onclick="currentSlide(2)"></span>    <!-- When a dot is clicked, the currentSlide function will be ran within slideshow.js, the number will also be passed to function so it knows which slide to go to. -->
+                    <span class="slidedot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            <br>
+        </section>
+        
+        <section id="preorder">         <!-- The preorder section contains all the html within the Pre-Order bonuses section, which tells users what they can get if they preorder either the standard edition or fancy ediiton -->
+            <div class="SectionBar">
+                Pre-Order Bonuses
+            </div>
+            <section class="BonusSection">
+                <article class="PreorderCard">
+                    <img src="img/InfoGraphicStandard.webp" loading="lazy" alt="Promotional image for the standard edition of Untitled Goose Game: A Honk Most Foul DLC. Divided into three sections. On the left, an illustration of a patchwork flat cap labeled 'grandad's hat.' In the center, bold white text reads 'PLAY TWO DAYS EARLY.' On the right, an image of a lined paper page titled 'a honk most foul,' featuring the text 'The Code' and a handwritten sample code written below.">
+                    <p>Pre-Order the Standard Edition today, and get these exclusive discounts!</p>
+                    <hr>
+                    <ul id="PreStandard">
+                        <li>A Honk Most Foul DLC Code</li>
+                        <li>Play the DLC up to two days early</li>
+                        <li>Grandad's Hat - In-game cosmetic</li>
+                        <br>
+        
+                    </ul>
+                </article>
+                <article class="PreorderCard">   <!-- Loading=lazy is used so that the images for these sections aren't loaded until the users scrolls down close to them, aka below the fold-->
+                    <img src="img/InfoGraphicFancy.webp" loading="lazy" alt="Promotional image for the fancy edition Untitled Goose Game: A Honk Most Foul DLC. Features four panels: top left shows a cartoon crown with red and yellow accents; top right shows a special edition game case with the title 'Untitled Goose Game: The Fancy Edition'; bottom left shows a cartoon lined paper page titled 'a honk most foul' with a handwritten sample code; bottom right displays bold white text reading 'PLAY FIVE DAYS EARLY' on a blue background.">
+                    <p>Pre-Order the Fancy Edition today, and get these exclusive discounts!</p>
+                    <hr>
+                    <ul id="PreFancy">
+                        <li>A Honk Most Foul Code + Base Game</li>
+                        <li>Play the DLC up to five days early</li>
+                        <li>Andrew's Crown - In-game cosmetic</li>
+                        <li>A beautiful, limited edition SteelBook case</li>
+                    </ul>
+                </article>
+            </section>
+        </section>
+        <section id="subscribe">        <!-- The subscribe section contains the newsletter email input as well as the subscribe button, it also contains links to the privacy police and terms of conditions as legally required by the DPA & GDPR (Data Protection Act 2018) (UK General Data Protection Regulation) when collecting user information -->
+            <div class="newsletter">
+                <h2>Be the first to know!</h2>
+                <p>Subscribe to our mailing list to learn more about...</p>
+                <h3>A Honk Most Foul</h3>
+        
+                <form class="newsletter-form">
+                    <label for="email" style="font-family: TransportHeavy;">Email :</label>
+                  <input type="email" name="email" placeholder="Enter your email, you know, for updates?" required>
+                  <button type="submit">Subscribe</button>
+                </form>
+        
+                <p class="disclaimer">
+                  By subscribing you're agreeing to House House's
+                  <a href="">Privacy Policy</a> and <a href="#">Terms Of Use</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    <!---->
+    <!--Below is the footer which contains all of the html for the nav bar at the footer, as well as the 'home' button which scrolls to the header when pressed-->
+    <!---->
+    <footer>
+        <div class="navbar">
+            <div class="navbar-left">
+              <img loading="lazy" src="img/househouse.webp" alt="The House House logo: A light blue badge-shaped icon with a dark blue house symbol in the center. Inside the house symbol, there are stylized letters resembling hh written light blue." class="icon">
+              <img loading="lazy" src="img/panic.webp" alt="The Panic Incorporated logo: A light blue badge-shaped icon with a bold letter P in the center, written in light blue. Similar to the House House symbol" class="icon">
+              <span id="CpyRght">© House House in cooperation with Panic</span>
+            </div>
+            <div class="navbar-center">
+              <span class="dot">•</span>
+              <a href="https://goose.game/presskit/" class="link">Press Kit</a>
+              <span class="dot">•</span>
+              <a href="https://goose.game/credits/" class="link">Credits</a>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <button class="home-button">
+              <span>Home</span>
+            </button>
+        </div>
+    </footer>
+
+    <br>
+    <br>
+    <br>
+      
+    <div class="canvas"></div> <!-- Initialises and makes available the three.js canvas -->
+
+    <!---->
+    <!--Below is the scripts section which loads more integral scripts, as well as QoL scripts to not piss off any users with perculiaraties-->
+    <!---->
+
+
+    <script src="javascript/slideshow.min.js"></script>                             <!-- Loads in the slideshow.js which controls all the interactions with the gallery as well as progressing slides -->
+    <script type="module" src="javascript/gooseobjects.min.js"></script>    <!-- Loads gooseobjects.js which sets up and controls everything to do with three.js and cannon-es.js, such as loading models, handling physics interactions, and managing pointer events. -->
+    <script type="module" src="javascript/hamburger.min.js"></script>  <!-- Manages the interaction logic for the hamburger menu when the display width is less than 785px -->
+    <!---->
+    <!---->
+    <!-- This inline script adds in some user interaction capabilities, specifically producing an audible honk when the logo is clicked, this also sends a user to a secret page if rapidly clicked 10 times within a 4 second time window  -->
+    <script>
+        let clickCount = 0;
+        let timer;
+
+        function playSound() {
+            const audio = new Audio('assets/goosehonk.mp3');
+            audio.play();
+        
+            // Increment click count and check the condition
+            clickCount++;
+        
+            if (!timer) {
+                timer = setTimeout(() => {
+                    clickCount = 0; // Reset the click count after 5 seconds
+                    timer = null;
+                }, 4000); // 4-second time window
+            }
+        
+            if (clickCount === 10) {
+                clearTimeout(timer); // Clear the timer
+                window.location.href = "https://goose.andreasrp.com/secret/xash.html"; // Redirect to the easter egg website
+            }
+        }
+    </script>
+    <!---->
+    <!---->
+    <!-- This inline script in principle does the same as the one above but if the 'Goose Online' online multiplayer card is clicked, an audible dial-up modem handshake will sound as well as animation showing connection to further enhance user interactibility -->
+    <script>
+        let cooldown = false
+        function playModemSound() {
+            if (!cooldown) {
+                const modemimg = document.getElementById("GooseModem")
+                modemimg.src = 'img/GooseOnlineAnimated.webp'
+                const modemaudio = new Audio('assets/ModemAudio.mp3');
+                modemaudio.volume = 1.0; //Had to put this bit in because of freaking ios safari
+                modemaudio.play();
+                cooldown = true;
+                setTimeout(() => {
+                    cooldown = false
+                    modemimg.src = 'img/GooseOnlineStaticDone.webp'
+                }, 25412);
+            } else {
+                console.log("Modem noise is on cooldown :(")
+            }
+        }
+    </script>
+    <!---->
+    <!---->
+    <!-- This inline script is simply QoL related and lets me scroll the page without having to point an A tag to whatever -->
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                // Scroll to the section smoothly
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

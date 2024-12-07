@@ -2,7 +2,7 @@
 /*----------------------------------------------------------------------*/
 /*----------------------------------------------------------------------*/
 /*----------------------------------------------------------------------*/
-/*THIS SECTION OF CSS CONTROLS FROM THE FONTS*/
+/*THIS SECTION OF CSS CONTROLS THE FONTS*/
 
 @font-face {
     font-family: 'TransportHeavy';
@@ -195,7 +195,7 @@ html {
 
 .navCTA:hover {
     background-color: white;
-    color: #1d5596;
+    color: #1f5999;
 }
 
 .gooselogo2 a{
@@ -205,15 +205,15 @@ html {
     padding: .5rem .8rem .5rem .8rem;
     margin: 0rem 1rem;
     border-radius: .5rem;
-    border-color: #1d5596;
+    border-color: #1f5999;
     border-style: solid;
-    background-color: #215fa7;
+    background-color: #276ebd;
 
 }
 
 .gooselogo2 a:hover{
     background-color: white;
-    color: #1d5596;
+    color: #1f5999;
     border-color: white;
 }
 
@@ -267,8 +267,8 @@ iframe {
 .SectionBar {
     padding: .5rem;
     margin: 3% 20%;
-    border: #1F5999;
-    background: #1F5999;
+    border: #1f5999;
+    background: #1f5999;
     border-style: solid;
     border-radius: 5px;
     border-width: 10px;
@@ -308,7 +308,7 @@ iframe {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #1d5596;
+    background-color: #1f5999;
     border-radius: 10px;
     border-width: .1rem;
     width: 100%;
@@ -318,11 +318,11 @@ iframe {
 
 .CardOverviewCardTop img {
     object-fit: cover;
-    border: #1d5596;
+    border: #1f5999;
     border-style: solid;
     border-width: .5rem;
     border-radius: 10px;
-    background-color: #1d5596;
+    background-color: #1f5999;
     width: 100%;
     box-sizing: border-box;
 }
@@ -350,7 +350,7 @@ iframe {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #1d5596;
+    background-color: #1f5999;
     border-radius: 10px;
     border-width: .1rem;
     width: 60%;
@@ -360,11 +360,11 @@ iframe {
 
 .CardOverviewCardBottom img {
     object-fit: cover;
-    border: #1d5596;
+    border: #1f5999;
     border-style: solid;
     border-width: .5rem;
     border-radius: 10px;
-    background-color: #1d5596;
+    background-color: #1f5999;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -392,8 +392,8 @@ iframe {
   position: relative;
   margin: auto;
   pointer-events: all;
-  background-color: #1d5596;
-  border-color: #1d5596;
+  background-color: #1f5999;
+  border-color: #1f5999;
   border-radius: 10px;
   border-width: 1rem;
 }
@@ -402,7 +402,7 @@ iframe {
 .mySlides {
   display: none;
   width: 100%;
-  border-color: #1d5596;
+  border-color: #1f5999;
   border-style: solid;
   border-width: .5rem;
   border-radius: 10px;
@@ -526,7 +526,7 @@ iframe {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #1d5596;
+    background-color: #1f5999;
     border-radius: 10px;
     border-width: .1rem;
     width: 100%;
@@ -557,7 +557,7 @@ iframe {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #1d5596;
+    background-color: #1f5999;
     border-radius: 10px;
     border-width: .1rem;
     width: 100%;
@@ -567,11 +567,11 @@ iframe {
 
 .PreorderCard img {
     object-fit: cover;
-    border: #1d5596;
+    border: #1f5999;
     border-style: solid;
     border-width: .5rem;
     border-radius: 10px;
-    background-color: #1d5596;
+    background-color: #1f5999;
     max-width: 100%;
     box-sizing: border-box;
 }
@@ -601,7 +601,7 @@ iframe {
 /*THIS SECTION OF CSS CONTROLS FROM THE SUBSCRIPTION TO THE FOOTER SECTION*/
 
 .newsletter {
-    background-color: #1d5596;
+    background-color: #1f5999;
     color: #ffffff;
     text-align: center;
     border-radius: 10px;
@@ -643,18 +643,18 @@ iframe {
     border-radius: 5px;
     font-size: 16px;
     font-family: Arial, sans-serif;
-    color: #1d5596;
+    color: #1f5999;
 }
   
 .newsletter-form input::placeholder {
-    color: #1d5596;
+    color: #1f5999;
     opacity: 0.7;
 }
   
 .newsletter-form button {
     padding: 10px 20px;
     background-color: #ffffff;
-    color: #1d5596;
+    color: #1f5999;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -682,7 +682,7 @@ iframe {
 /*----------------------------------------------------------------------*/
 /*----------------------------------------------------------------------*/
 /*----------------------------------------------------------------------*/
-/*THIS SECTION OF CSS CONTROLS FROM THE FOOTER SECTION*/
+/*THIS SECTION OF CSS CONTROLS THE FOOTER SECTION*/
 
 
 footer {
@@ -695,7 +695,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1d5596;
+    background-color: #1f5999;
     border-radius: 0.5rem;
     padding: 2rem 2rem;
     color: white;
@@ -747,7 +747,7 @@ footer {
 .home-button {
     display: flex;
     align-items: center;
-    background-color: #1d5596;
+    background-color: #1f5999;
     color: #ffffff;
     border: none;
     border-radius: 0 0 0.5rem 0.5rem;
@@ -771,21 +771,11 @@ footer {
 }
 
 
-
-
-
-  
-
-
-  
-
-  
-
-
-
-
-
-/* Media Only Screen for Mobile */
+/*----------------------------------------------------------------------*/
+/*----------------------------------------------------------------------*/
+/*----------------------------------------------------------------------*/
+/*----------------------------------------------------------------------*/
+/*THIS SECTION OF CSS CONTROLS FROM THE MEDIA QUERY STUFF WHEN SCREEN WIDTH IS BELOW 785 PIXELS*/
 
 @media only screen and (max-width: 785px) {
 
@@ -803,7 +793,7 @@ footer {
     }
 
     .hamborger:hover .footlettuce path {
-        fill: #1d5596;
+        fill: #1f5999;
     }
 
     .hamborger:hover {
@@ -889,9 +879,9 @@ footer {
         max-width: 100%;
         padding: 1rem .3rem;
         border-radius: .3rem;
-        border-color: #1d5596;
+        border-color: #1f5999;
         border-style: solid;
-        background-color: #215fa7;
+        background-color: #276ebd;
     
     }
 
