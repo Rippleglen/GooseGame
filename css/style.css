@@ -425,17 +425,23 @@ iframe {
     opacity: 50%;
   }
   
-  .prev {
+.prev {
     left: 0;
     transform: translateY(-50%);
 }
   
-  .next {
+.next {
     right: 0;
     transform: translateY(-50%);
 }
   
+.slideshow-container button {
+    background: none;
+    color: inherit;
+    border: none;
+    outline: inherit;
 
+}
 
 .next {
   right: 0;
