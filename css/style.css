@@ -294,7 +294,7 @@ iframe {
     max-height: 100%;
 }
 
-.CardOverviewCardTop p {
+.CardOverviewCardTop h5 {
     position: inherit;
     text-align: center;
     font-family: TransportLight;
@@ -336,7 +336,7 @@ iframe {
     max-height: 100%;
 }
 
-.CardOverviewCardBottom p {
+.CardOverviewCardBottom h5 {
     position: inherit;
     text-align: center;
     font-family: TransportLight;
@@ -540,7 +540,7 @@ iframe {
 }
 
 
-.PreorderCard p {
+.PreorderCard h5 {
     position: inherit;
     text-align: center;
     font-family: TransportLight;
