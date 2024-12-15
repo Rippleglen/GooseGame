@@ -61,7 +61,7 @@
                     But, you, the <span style="font-family: 'LearningCurveBold'; font-size: 1.5rem;">horrible</span> goose you're, have your own plans.</p>
                 </div>
                 <div class="iFrameContainer">
-                    <iframe width="600" height="300" src="https://www.youtube.com/embed/iaH6SkrWi9w?si=UsCVclwxgPu9cI-Q" title="Untitled Goose Game - A Honk Most Foul - DLC" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="1920" height="1080" src="https://www.youtube.com/embed/iaH6SkrWi9w?si=UsCVclwxgPu9cI-Q" title="Untitled Goose Game - A Honk Most Foul - DLC" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         
@@ -209,6 +209,8 @@
     <!---->
 
 
+    <!-- THE FULL UNMINIFED JAVASCRIPT IS AVAILABLE IN JAVASCRIPT/UNMINIFIEDJS -->
+
     <script src="javascript/slideshow.min.js"></script>                             <!-- Loads in the slideshow.js which controls all the interactions with the gallery as well as progressing slides -->
     <script type="module" src="javascript/gooseobjects.min.js"></script>    <!-- Loads gooseobjects.js which sets up and controls everything to do with three.js and cannon-es.js, such as loading models, handling physics interactions, and managing pointer events. -->
     <script type="module" src="javascript/hamburger.min.js"></script>  <!-- Manages the interaction logic for the hamburger menu when the display width is less than 785px -->
@@ -273,6 +275,27 @@
             }
         }
 
+    </script>
+    <!---->
+    <!---->
+    <!-- Had to put this JavaScript in so I can trick the iFrame into scaling to it's parent container, as the W3C validator got very mad that I was using percentages in the iFrame width and height. -->
+     
+    <script>
+        function resizeIframe() {
+            const container = document.querySelector('.iFrameContainer');
+            const iframe = container.querySelector('iframe');
+            const aspectRatio = 600 / 1100;
+    
+            const containerWidth = container.offsetWidth;
+            iframe.style.width = containerWidth + 'px';
+            iframe.style.height = containerWidth * aspectRatio + 'px';
+        }
+    
+        // Initial resize
+        resizeIframe();
+    
+        // Resize on window resize
+        window.addEventListener('resize', resizeIframe);
     </script>
     
 </body>
